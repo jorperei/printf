@@ -6,7 +6,7 @@
 /*   By: jorperei <jorperei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/06 12:49:51 by jorperei          #+#    #+#             */
-/*   Updated: 2026/11/18 18:25:13 by jorperei         ###   ########.fr       */
+/*   Updated: 2026/11/23 14:27:23 by jorperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
+int				ft_hexu(unsigned long n);
+int				ft_hexl(unsigned long n);
 int				ft_isalnum(int i);
 int				ft_isalpha(int i);
 int				ft_isascii(int c);

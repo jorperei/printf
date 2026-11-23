@@ -6,18 +6,17 @@
 /*   By: jorperei <jorperei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/20 17:14:18 by jorperei          #+#    #+#             */
-/*   Updated: 2026/11/20 17:26:18 by jorperei         ###   ########.fr       */
+/*   Updated: 2026/11/23 14:40:07 by jorperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft/libft.h"
 
-unsigned int	ft_sc(char c)
+int	ft_sc(char c)
 {
-	if (!c)
-		return (0);
-	return (write (1, &c, 1));
+	return (write(1, &c, 1));
 }
+
 /*
 int	main(void)
 {
