@@ -6,11 +6,11 @@
 /*   By: jorperei <jorperei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 14:16:09 by jorperei          #+#    #+#             */
-/*   Updated: 2026/11/23 14:31:57 by jorperei         ###   ########.fr       */
+/*   Updated: 2026/11/23 17:33:39 by jorperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/libft.h"
+#include "ft_printf.h"
 
 int	ft_putnbhexlc(unsigned int n)
 {

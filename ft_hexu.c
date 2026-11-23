@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_hexu.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jorperei <jorperei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/06 12:50:44 by jorperei          #+#    #+#             */
-/*   Updated: 2026/11/06 16:26:45 by jorperei         ###   ########.fr       */
+/*   Created: 2026/11/23 14:23:17 by jorperei          #+#    #+#             */
+/*   Updated: 2026/11/23 17:33:12 by jorperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int i)
+#include "ft_printf.h"
+
+int	ft_hexu(unsigned long n)
 {
-	if (i >= '0' && i <= '9')
-	{
-		return (1);
-	}
+	char	*hexvalues;
+
+	hexvalues = "0123456789ABCDEF";
+	if (n >= 16)
+		return (ft_hexu(n / 16) + ft_hexu(n % 16));
 	else
-	{
-		return (0);
-	}
+		return (write(1, &hexvalues[n], 1));
 }

@@ -6,19 +6,19 @@
 /*   By: jorperei <jorperei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 13:02:33 by jorperei          #+#    #+#             */
-/*   Updated: 2026/11/23 14:29:11 by jorperei         ###   ########.fr       */
+/*   Updated: 2026/11/23 17:33:21 by jorperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/libft.h"
+#include "ft_printf.h"
 
 int	ft_pptr(void *ptr)
 {
-    unsigned long	addr;
-	
-    if (ptr == NULL)
+	unsigned long	addr;
+
+	if (ptr == NULL)
 	{
-        return (write(1, "(nil)", 5));
+		return (write(1, "(nil)", 5));
 	}
 	write(1, "0x", 2);
 	addr = (unsigned long)ptr;

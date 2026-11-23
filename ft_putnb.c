@@ -6,17 +6,17 @@
 /*   By: jorperei <jorperei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 13:42:21 by jorperei          #+#    #+#             */
-/*   Updated: 2026/11/23 14:02:43 by jorperei         ###   ########.fr       */
+/*   Updated: 2026/11/23 17:33:35 by jorperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/libft.h"
+#include "ft_printf.h"
 
 int	ft_putnb(int n)
 {
 	char	i;
 	int		s;
-	
+
 	s = 0;
 	if (n == -2147483648)
 	{

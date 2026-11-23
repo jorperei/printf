@@ -1,35 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_hexl.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jorperei <jorperei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/15 19:54:40 by jorperei          #+#    #+#             */
-/*   Updated: 2026/11/15 20:13:51 by jorperei         ###   ########.fr       */
+/*   Created: 2026/11/23 14:23:04 by jorperei          #+#    #+#             */
+/*   Updated: 2026/11/23 17:32:48 by jorperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+int	ft_hexl(unsigned long n)
 {
-	if (!lst || !new)
-		return ;
-	new->next = *lst;
-	lst[0] = new;
+	char	*hexvalues;
+
+	hexvalues = "0123456789abcdef";
+	if (n >= 16)
+		return (ft_hexl(n / 16) + ft_hexl(n % 16));
+	else
+		return (write(1, &hexvalues[n], 1));
 }
-
-/*
-int	main(void)
-{
-	t_list	*teste;
-
-	teste = ft_lstnew("B");
-	ft_lstadd_front(&teste, ft_lstnew("A"));
-	printf("%s\n", (char *)teste->content);
-	printf("%s\n", (char *)teste->next->content);
-	free(teste->next);
-	free(teste);
-	return (0);
-}*/

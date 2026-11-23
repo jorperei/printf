@@ -6,13 +6,13 @@
 /*   By: jorperei <jorperei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 14:32:13 by jorperei          #+#    #+#             */
-/*   Updated: 2026/11/23 14:35:07 by jorperei         ###   ########.fr       */
+/*   Updated: 2026/11/23 17:33:42 by jorperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/libft.h"
+#include "ft_printf.h"
 
 int	ft_putnbhexuc(unsigned int n)
 {
-    return(ft_hexu(n));
+	return (ft_hexu(n));
 }

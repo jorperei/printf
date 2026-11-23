@@ -6,11 +6,11 @@
 /*   By: jorperei <jorperei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/20 17:14:18 by jorperei          #+#    #+#             */
-/*   Updated: 2026/11/23 14:40:07 by jorperei         ###   ########.fr       */
+/*   Updated: 2026/11/23 17:33:49 by jorperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/libft.h"
+#include "ft_printf.h"
 
 int	ft_sc(char c)
 {
