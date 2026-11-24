@@ -6,36 +6,42 @@
 /*   By: jorperei <jorperei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 13:42:21 by jorperei          #+#    #+#             */
-/*   Updated: 2026/11/23 17:33:35 by jorperei         ###   ########.fr       */
+/*   Updated: 2026/11/24 17:45:47 by jorperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
+static int	ft_failcheck(int a, int b)
+{
+	if (a < 0 || b < 0)
+		return (-1);
+	return (a + b);
+}
+
 int	ft_putnb(int n)
 {
 	char	i;
 	int		s;
+	int		r;
 
 	s = 0;
 	if (n == -2147483648)
-	{
-		write(1, "-2147483648", 11);
-		return (11);
-	}
+		return (write(1, "-2147483648", 11));
 	if (n < 0)
 	{
-		write(1, "-", 1);
+		s = write(1, "-", 1);
+		if (s < 0)
+			return (-1);
 		n = n * -1;
-		s = 1;
 	}
 	if (n <= 9)
 	{
 		i = n + '0';
-		return (write(1, &i, 1) + s);
+		return (ft_failcheck(write(1, &i, 1), s));
 	}
-	else
-		return (ft_putnb(n / 10) + ft_putnb(n % 10) + s);
+	r = ft_putnb(n / 10);
+	return (ft_failcheck(ft_failcheck(r, ft_putnb(n % 10)), s));
 }
 
 /*
@@ -55,6 +61,7 @@ static void	test(int n)
 	r2 = ft_putnb(n);
 	printf("  (ret %d)\n\n", r2);
 }
+
 
 int	main(void)
 {
