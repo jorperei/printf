@@ -6,7 +6,7 @@
 /*   By: jorperei <jorperei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 13:02:33 by jorperei          #+#    #+#             */
-/*   Updated: 2026/11/24 16:30:43 by jorperei         ###   ########.fr       */
+/*   Updated: 2026/11/25 16:12:20 by jorperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_pptr(void *ptr)
 {
-	unsigned long	addr;
+	uintptr_t		addr;
 	int				valuecheck;
 	int				writevalue;
 
@@ -22,7 +22,7 @@ int	ft_pptr(void *ptr)
 	{
 		return (write(1, "(nil)", 5));
 	}
-	addr = (unsigned long)ptr;
+	addr = (uintptr_t)ptr;
 	writevalue = write(1, "0x", 2);
 	if (writevalue < 0)
 		return (writevalue);

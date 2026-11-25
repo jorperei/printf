@@ -6,7 +6,7 @@
 /*   By: jorperei <jorperei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 17:23:23 by jorperei          #+#    #+#             */
-/*   Updated: 2026/11/23 18:53:05 by jorperei         ###   ########.fr       */
+/*   Updated: 2026/11/25 16:12:32 by jorperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdarg.h>
+# include <stdint.h>
 
 int	ft_hexu(unsigned long n);
 int	ft_hexl(unsigned long n);

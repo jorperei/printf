@@ -6,7 +6,7 @@
 /*   By: jorperei <jorperei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 17:20:16 by jorperei          #+#    #+#             */
-/*   Updated: 2026/11/24 18:18:02 by jorperei         ###   ########.fr       */
+/*   Updated: 2026/11/25 16:09:52 by jorperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ static int	ft_step(const char *tp, int *i, va_list *args)
 	}
 }
 
-int	ft_printf(const char *tp, ...)
+int	ft_printf(const char *format, ...)
 {
 	int		i;
 	int		count;
@@ -60,10 +60,10 @@ int	ft_printf(const char *tp, ...)
 
 	i = 0;
 	count = 0;
-	va_start(args, tp);
-	while (tp[i])
+	va_start(args, format);
+	while (format[i])
 	{
-		temp = ft_step(tp, &i, &args);
+		temp = ft_step(format, &i, &args);
 		if (temp < 0)
 		{
 			va_end(args);
@@ -76,7 +76,6 @@ int	ft_printf(const char *tp, ...)
 	return (count);
 }
 /*
-#include <limits.h>
 
 int	main(void)
 {
